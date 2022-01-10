@@ -41,20 +41,33 @@ var altura = document.getElementById('altura')
 
 //funcao que adiciona o objeto pessoa ao array pessoas utilizando o valor digitado nos campos
 function addPerson() {
-  
-    pessoas.push({
-      nome: nome.value,
-      sobrenome: lastname.value,
-      peso: peso.value,
-      altura: altura.value,
-    })
-    
-    nome.value = ""
-    lastname.value = ""
-    peso.value = ""
-    altura.value = ""
 
-    listarPessoas()
+
+    if(nome.value != "" && lastname.value != "" && peso.value != 0 && altura.value != 0 ) {
+
+        pessoas.push({
+            nome: nome.value,
+            sobrenome: lastname.value,
+            peso: peso.value,
+            altura: altura.value,
+          })
+          
+          nome.value = ""
+          lastname.value = ""
+          peso.value = ""
+          altura.value = ""
+      
+          listarPessoas()
+
+    } else {
+        messages = document.getElementById('messages')
+        messages.innerHTML = "Todos os campos precisam ser preenchidos !"
+
+       setTimeout(() => {messages.innerHTML = ""}, 3000)
+    }
+
+  
+    
 
   
 }
