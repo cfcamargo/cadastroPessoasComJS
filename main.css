@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-color: #222f3e;
+    color: #341f97;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.formulario {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #341f97;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+}
+
+.formulario h1{
+    color: #00d2d3;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form{
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo{
+    background-color: white;
+    padding: .5rem .8rem;
+    width: 400px;
+    border-radius:30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .3rem;
+}
+
+.campo input{
+    padding: .6rem .2rem;
+    border: none;
+    outline: none;
+    color: #5f27cd;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.salvar{
+    padding: .5rem .8rem;
+    width: 120px;
+    border-radius: 70px;
+    border: none;
+    background-color: #10ac84;
+    color: white;
+}
+
+.cancel{
+    padding: .5rem .8rem;
+    width: 120px;
+    border-radius: 70px;
+    border: none;
+    background-color: #ee5253;
+    color: white;
+}
+
+#pessoas { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 210px);
+    justify-content: center;
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-top: 2rem;
+   
+    
+}
+
+.card{
+    background-color: #00d2d3;
+    padding: 1rem 1.5rem;
+    border-radius:20px;
+    color: #222f3e;
+    
+}
