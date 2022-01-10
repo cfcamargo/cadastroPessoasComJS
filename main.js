@@ -42,7 +42,7 @@ var altura = document.getElementById('altura')
 //funcao que adiciona o objeto pessoa ao array pessoas utilizando o valor digitado nos campos
 function addPerson() {
 
-
+    // aqui validamos se os campos estao preenchidos, caso sim ele cadastra no array pessoas
     if(nome.value != "" && lastname.value != "" && peso.value != 0 && altura.value != 0 ) {
 
         pessoas.push({
@@ -60,6 +60,9 @@ function addPerson() {
           listarPessoas()
 
     } else {
+        // esse codigo é executado caso o if nao seja satisfatorio ou seja existem campos vazios
+        // quando isso ocorre, adicionamos um texto num paragrafo no DOM informando q precisa
+        // preencher todos os campos. Esse texto permanece em tela por 3segundos
         messages = document.getElementById('messages')
         messages.innerHTML = "Todos os campos precisam ser preenchidos !"
 
